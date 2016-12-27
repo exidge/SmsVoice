@@ -1,0 +1,135 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Testuj zamiane na mowe"
+        android:id="@+id/btnOdczytajTekst"
+        android:onClick="ButtonOdczytaj_OnClick"
+        android:layout_above="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/btnDeaktywuj"
+        android:layout_alignEnd="@+id/btnDeaktywuj" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textBox"
+        android:layout_above="@+id/btnOdczytajTekst"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Otwórz sklep Play"
+        android:id="@+id/btnPlayInfo"
+        android:layout_below="@+id/lbPlayInfo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/lbPlayInfo"
+        android:layout_alignEnd="@+id/lbPlayInfo"
+        android:onClick="ButtonPlay_OnClick" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Do poprawnego działania wymagane jest zainstalowanie silnika tts np:"
+        android:id="@+id/lbPlayInfo"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Sprawdz też czy w programie do przetwarzania mowy jest zainstalowany język(preferowany j. Polski)"
+        android:id="@+id/lbSettingsInfo"
+        android:layout_below="@+id/btnPlayInfo"
+        android:layout_centerHorizontal="true"
+        android:textSize="15dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Otwórz Ustawienia"
+        android:id="@+id/btnSettingsInfo"
+        android:onClick="ButtonSettings_OnClick"
+        android:layout_below="@+id/lbSettingsInfo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Status TTS: "
+        android:id="@+id/textView"
+        android:textSize="10dp"
+        android:singleLine="true"
+        android:gravity="center_horizontal"
+        android:layout_above="@+id/tbStatus"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/tbStatus"
+        android:textSize="10dp"
+        android:singleLine="true"
+        android:gravity="center_horizontal"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Aktywuj"
+        android:id="@+id/btnAktywuj"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:enabled="true"
+        android:onClick="btnActivate_OnClick" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Deaktywuj"
+        android:id="@+id/btnDeaktywuj"
+        android:layout_alignBottom="@+id/btnAktywuj"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:enabled="false"
+        android:onClick="btnDeActivate_OnClick" />
+
+    <Button
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:text="New Button"
+        android:id="@+id/button"
+        android:layout_above="@+id/textBox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="showAll_OnClick" />
+
+</RelativeLayout>
